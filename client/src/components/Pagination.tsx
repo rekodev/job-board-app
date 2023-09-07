@@ -74,9 +74,26 @@ export default function Pagination({
               <span className='sr-only'>Previous</span>
               <ChevronLeftIcon className='h-5 w-5' aria-hidden='true' />
             </a>
-            {/* Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" */}
 
             {[...Array(totalPages)].map((_page, idx) => {
+              if (page + 2 === idx || page - 4 === idx) {
+                // First 1 and last 1 always show
+                if ([...Array(totalPages)].length - 1 > idx && idx > 0) {
+                  return (
+                    <span className='relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 focus:outline-offset-0'>
+                      ...
+                    </span>
+                  );
+                }
+              }
+
+              if (idx < page - 3 || idx > page + 1) {
+                // First 1 and last 1 always show
+                if ([...Array(totalPages)].length - 1 > idx && idx > 0) {
+                  return null;
+                }
+              }
+
               if (idx + 1 === page) {
                 return (
                   <a

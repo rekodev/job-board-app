@@ -78,5 +78,85 @@
     "jobType": "Remote",
     "applicationDeadline": "2023-10-08",
     "salaryRange": "$55,000 - $80,000"
+  },
+  {
+    "jobTitle": "Software Engineer",
+    "company": "TechSoft",
+    "location": "San Francisco, CA",
+    "jobType": "Full-time",
+    "applicationDeadline": "2023-10-10",
+    "salaryRange": "$80,000 - $120,000"
+  },
+  {
+    "jobTitle": "Data Analyst",
+    "company": "DataSolutions",
+    "location": "New York, NY",
+    "jobType": "Part-time",
+    "applicationDeadline": "2023-09-25",
+    "salaryRange": "$50,000 - $75,000"
+  },
+  {
+    "jobTitle": "UI/UX Designer",
+    "company": "DesignCorp",
+    "location": "Austin, TX",
+    "jobType": "Remote",
+    "applicationDeadline": "2023-09-30",
+    "salaryRange": "$70,000 - $100,000"
+  },
+  {
+    "jobTitle": "Marketing Specialist",
+    "company": "PromotePlus",
+    "location": "Los Angeles, CA",
+    "jobType": "Full-time",
+    "applicationDeadline": "2023-10-05",
+    "salaryRange": "$60,000 - $85,000"
+  },
+  {
+    "jobTitle": "Accountant",
+    "company": "FinanceFirm",
+    "location": "Chicago, IL",
+    "jobType": "Full-time",
+    "applicationDeadline": "2023-09-20",
+    "salaryRange": "$65,000 - $90,000"
+  },
+  {
+    "jobTitle": "Project Manager",
+    "company": "BuildIt",
+    "location": "Miami, FL",
+    "jobType": "Contract",
+    "applicationDeadline": "2023-10-15",
+    "salaryRange": "$75,000 - $110,000"
+  },
+  {
+    "jobTitle": "Human Resources Manager",
+    "company": "PeopleFirst",
+    "location": "Boston, MA",
+    "jobType": "Full-time",
+    "applicationDeadline": "2023-09-28",
+    "salaryRange": "$70,000 - $95,000"
+  },
+  {
+    "jobTitle": "Network Administrator",
+    "company": "NetServe",
+    "location": "Dallas, TX",
+    "jobType": "Full-time",
+    "applicationDeadline": "2023-10-12",
+    "salaryRange": "$65,000 - $90,000"
+  },
+  {
+    "jobTitle": "Sales Representative",
+    "company": "SellMore",
+    "location": "Denver, CO",
+    "jobType": "Part-time",
+    "applicationDeadline": "2023-09-22",
+    "salaryRange": "$40,000 - $60,000"
+  },
+  {
+    "jobTitle": "Copywriter",
+    "company": "WordsWorth",
+    "location": "Seattle, WA",
+    "jobType": "Remote",
+    "applicationDeadline": "2023-10-08",
+    "salaryRange": "$55,000 - $80,000"
   }
 ]
