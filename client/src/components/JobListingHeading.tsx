@@ -15,7 +15,7 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function PageHeading(props: JobListing) {
+export default function JobListingHeading(props: JobListing) {
   return (
     <div className='lg:flex lg:items-center lg:justify-between'>
       <div className='min-w-0 flex-1'>

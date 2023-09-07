@@ -1,10 +1,9 @@
 'use client';
-import PageHeading from '@/components/PageHeading';
-import React, { useState } from 'react';
 import jobs from '@/api/jobs.json';
-import Pagination from '@/components/Pagination';
 import JobListing from '@/components/JobListing';
+import Pagination from '@/components/Pagination';
 import useJobListings from '@/hooks/useJobListings';
+import { useState } from 'react';
 
 export default function Page() {
   const [page, setPage] = useState(1);
@@ -20,7 +19,7 @@ export default function Page() {
   }
 
   return (
-    <div className='flex flex-col gap-6'>
+    <div className='flex flex-col gap-6 border-white border-solid border-2 rounded-md shadow-lg'>
       {data?.map((job: JobListing, idx: number) => {
         if (
           idx < page * resultsPerPage &&
@@ -28,7 +27,8 @@ export default function Page() {
         ) {
           return (
             <JobListing
-              key={idx}
+              id={job.id}
+              key={job.id}
               jobTitle={job.jobTitle}
               company={job.company}
               location={job.location}

@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import React from 'react';
 
 const JobListing = (props: JobListing) => {
   return (
-    <a href='#' className='block hover:bg-gray-50'>
+    <Link href={`/job/${props.id}`} className='block hover:bg-gray-50'>
       <div className='px-4 py-4 sm:px-6'>
         <div className='flex items-center justify-between'>
           <div className='truncate text-sm font-medium text-indigo-600'>
@@ -45,7 +46,7 @@ const JobListing = (props: JobListing) => {
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 
