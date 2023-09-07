@@ -8,16 +8,8 @@ import useJobListings from '@/hooks/useJobListings';
 
 export default function Page() {
   const [page, setPage] = useState(1);
-  const resultsPerPage = 2;
+  const resultsPerPage = 10;
   const { data, isLoading, isError, error } = useJobListings();
-
-  const paginateRight = () => {
-    setPage((prev) => prev + 1);
-  };
-
-  const paginateLeft = () => {
-    setPage((prev) => prev - 1);
-  };
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -47,7 +39,12 @@ export default function Page() {
           );
         }
       })}
-      <Pagination jobListings={jobs} resultsPerPage={resultsPerPage} page={page} setPage={setPage} />
+      <Pagination
+        jobListings={jobs}
+        resultsPerPage={resultsPerPage}
+        page={page}
+        setPage={setPage}
+      />
     </div>
   );
 }
