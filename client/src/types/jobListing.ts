@@ -1,5 +1,5 @@
 type JobListing = {
-  id: number;
+  _id: string;
   jobTitle: string;
   company: string;
   location: string;

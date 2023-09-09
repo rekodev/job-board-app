@@ -4,7 +4,7 @@ import React from 'react';
 const JobListing = (props: JobListing) => {
   return (
     <Link
-      href={`/job/${props.id}`}
+      href={`/job/${props._id}`}
       className='block bg-gray-50 hover:bg-gray-50'
     >
       <div className='px-4 py-4 sm:px-6'>

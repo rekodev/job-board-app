@@ -1,14 +1,10 @@
-import jobData from '@/api/jobs.json';
+import { getJobListingById } from '@/api/getJobListingById';
 import { useQuery } from '@tanstack/react-query';
 
-const useJobListing = (jobListingId: number) => {
-  const fetchJobListing = async () => {
-    return jobData[jobListingId - 1];
-  };
-
+const useJobListing = (jobListingId: string) => {
   const { data, isLoading, isError, error } = useQuery<JobListing | null>({
     queryKey: ['jobListing', jobListingId],
-    queryFn: fetchJobListing,
+    queryFn: () => getJobListingById(jobListingId),
   });
 
   return { data, isLoading, isError, error };
