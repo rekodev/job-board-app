@@ -1,5 +1,4 @@
 'use client';
-import jobs from '@/api/jobs.json';
 import JobListing from '@/components/JobListing';
 import Pagination from '@/components/Pagination';
 import SearchBar from '@/components/SearchBar';
@@ -40,8 +39,8 @@ export default function Page() {
               ) {
                 return (
                   <JobListing
-                    id={job.id}
-                    key={job.id}
+                    _id={job._id}
+                    key={job._id}
                     jobTitle={job.jobTitle}
                     company={job.company}
                     location={job.location}
@@ -54,7 +53,7 @@ export default function Page() {
             }
           })}
           <Pagination
-            jobListings={jobs}
+            jobListings={data ? data : null}
             resultsPerPage={resultsPerPage}
             page={page}
             setPage={setPage}

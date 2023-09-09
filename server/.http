@@ -1,0 +1,18 @@
+###
+GET http://localhost:5000/api/job-listings
+
+###
+GET http://localhost:5000/api/job-listing/64fc61bc02fe14e940d2aed1
+
+### Add a new job listing
+POST http://localhost:5000/api/job-listings
+Content-Type: application/json
+
+{
+    "jobTitle": "Software Developer",
+    "company": "TechCorp",
+    "location": "New York, NY",
+    "jobType": "Full-time",
+    "applicationDeadline": "2023-12-31",
+    "salaryRange": "50000-70000"
+}

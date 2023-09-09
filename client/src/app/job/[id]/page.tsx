@@ -3,7 +3,7 @@ import JobListingHeading from '@/components/JobListingHeading';
 import useJobListing from '@/hooks/useJobListing';
 import React from 'react';
 
-export default function Page({ params }: { params: { id: number } }) {
+export default function Page({ params }: { params: { id: string } }) {
   const { data, isError, isLoading, error } = useJobListing(params.id);
 
   if (isLoading) {
@@ -18,7 +18,7 @@ export default function Page({ params }: { params: { id: number } }) {
     <div>
       {data && (
         <JobListingHeading
-          id={data.id}
+          _id={data._id}
           jobTitle={data.jobTitle}
           jobType={data.jobType}
           salaryRange={data.salaryRange}

@@ -2,7 +2,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid';
 import { useEffect } from 'react';
 
 type PaginationProps = {
-  jobListings: JobListing[];
+  jobListings: JobListing[] | null;
   resultsPerPage: number;
   page: number;
   setPage: React.Dispatch<React.SetStateAction<number>>;
@@ -16,7 +16,9 @@ export default function Pagination({
 }: PaginationProps) {
   useEffect(() => {}, [page]);
 
-  const totalPages = Math.ceil(jobListings.length / resultsPerPage);
+  const totalPages = jobListings
+    ? Math.ceil(jobListings.length / resultsPerPage)
+    : 0;
 
   const prevPage = () => {
     if (page > 1) {
@@ -58,7 +60,7 @@ export default function Pagination({
               {page * resultsPerPage - resultsPerPage + 1}
             </span>{' '}
             to <span className='font-medium'>{page * resultsPerPage}</span> of{' '}
-            <span className='font-medium'>{jobListings.length}</span> results
+            <span className='font-medium'>{jobListings?.length}</span> results
           </p>
         </div>
         <div>
