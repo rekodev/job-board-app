@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import ReactQueryProvider from '@/providers/ReactQueryProvider';
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,12 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={`${inter.className} dark: bg-gray-800`}>
         <ReactQueryProvider>
           <Header />
-          <main className=' mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-4 mb-4'>
+          <main className='flex flex-col mx-auto dark: bg-gray-800'>
             {children}
           </main>
+          <Footer />
         </ReactQueryProvider>
       </body>
     </html>

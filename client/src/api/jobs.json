@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "jobTitle": "Software Engineer",
     "company": "TechSoft",
     "location": "San Francisco, CA",
@@ -8,6 +9,7 @@
     "salaryRange": "$80,000 - $120,000"
   },
   {
+    "id": 2,
     "jobTitle": "Data Analyst",
     "company": "DataSolutions",
     "location": "New York, NY",
@@ -16,6 +18,7 @@
     "salaryRange": "$50,000 - $75,000"
   },
   {
+    "id": 3,
     "jobTitle": "UI/UX Designer",
     "company": "DesignCorp",
     "location": "Austin, TX",
@@ -24,6 +27,7 @@
     "salaryRange": "$70,000 - $100,000"
   },
   {
+    "id": 4,
     "jobTitle": "Marketing Specialist",
     "company": "PromotePlus",
     "location": "Los Angeles, CA",
@@ -32,6 +36,7 @@
     "salaryRange": "$60,000 - $85,000"
   },
   {
+    "id": 5,
     "jobTitle": "Accountant",
     "company": "FinanceFirm",
     "location": "Chicago, IL",
@@ -40,6 +45,7 @@
     "salaryRange": "$65,000 - $90,000"
   },
   {
+    "id": 6,
     "jobTitle": "Project Manager",
     "company": "BuildIt",
     "location": "Miami, FL",
@@ -48,6 +54,7 @@
     "salaryRange": "$75,000 - $110,000"
   },
   {
+    "id": 7,
     "jobTitle": "Human Resources Manager",
     "company": "PeopleFirst",
     "location": "Boston, MA",
@@ -56,6 +63,7 @@
     "salaryRange": "$70,000 - $95,000"
   },
   {
+    "id": 8,
     "jobTitle": "Network Administrator",
     "company": "NetServe",
     "location": "Dallas, TX",
@@ -64,6 +72,7 @@
     "salaryRange": "$65,000 - $90,000"
   },
   {
+    "id": 9,
     "jobTitle": "Sales Representative",
     "company": "SellMore",
     "location": "Denver, CO",
@@ -72,6 +81,7 @@
     "salaryRange": "$40,000 - $60,000"
   },
   {
+    "id": 10,
     "jobTitle": "Copywriter",
     "company": "WordsWorth",
     "location": "Seattle, WA",
@@ -80,6 +90,7 @@
     "salaryRange": "$55,000 - $80,000"
   },
   {
+    "id": 11,
     "jobTitle": "Software Engineer",
     "company": "TechSoft",
     "location": "San Francisco, CA",
@@ -88,6 +99,7 @@
     "salaryRange": "$80,000 - $120,000"
   },
   {
+    "id": 12,
     "jobTitle": "Data Analyst",
     "company": "DataSolutions",
     "location": "New York, NY",
@@ -96,6 +108,7 @@
     "salaryRange": "$50,000 - $75,000"
   },
   {
+    "id": 13,
     "jobTitle": "UI/UX Designer",
     "company": "DesignCorp",
     "location": "Austin, TX",
@@ -104,6 +117,7 @@
     "salaryRange": "$70,000 - $100,000"
   },
   {
+    "id": 14,
     "jobTitle": "Marketing Specialist",
     "company": "PromotePlus",
     "location": "Los Angeles, CA",
@@ -112,6 +126,7 @@
     "salaryRange": "$60,000 - $85,000"
   },
   {
+    "id": 15,
     "jobTitle": "Accountant",
     "company": "FinanceFirm",
     "location": "Chicago, IL",
@@ -120,6 +135,7 @@
     "salaryRange": "$65,000 - $90,000"
   },
   {
+    "id": 16,
     "jobTitle": "Project Manager",
     "company": "BuildIt",
     "location": "Miami, FL",
@@ -128,6 +144,7 @@
     "salaryRange": "$75,000 - $110,000"
   },
   {
+    "id": 17,
     "jobTitle": "Human Resources Manager",
     "company": "PeopleFirst",
     "location": "Boston, MA",
@@ -136,6 +153,7 @@
     "salaryRange": "$70,000 - $95,000"
   },
   {
+    "id": 18,
     "jobTitle": "Network Administrator",
     "company": "NetServe",
     "location": "Dallas, TX",
@@ -144,6 +162,7 @@
     "salaryRange": "$65,000 - $90,000"
   },
   {
+    "id": 19,
     "jobTitle": "Sales Representative",
     "company": "SellMore",
     "location": "Denver, CO",
@@ -152,6 +171,7 @@
     "salaryRange": "$40,000 - $60,000"
   },
   {
+    "id": 20,
     "jobTitle": "Copywriter",
     "company": "WordsWorth",
     "location": "Seattle, WA",
