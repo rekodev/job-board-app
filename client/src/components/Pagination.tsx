@@ -1,5 +1,5 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 
 type PaginationProps = {
   jobListings: JobListing[] | null;
@@ -20,6 +20,11 @@ export default function Pagination({
     ? Math.ceil(jobListings.length / resultsPerPage)
     : 0;
 
+  const pagesArray = useMemo(
+    () => Array.from({ length: totalPages }, (_, idx) => idx),
+    [totalPages]
+  );
+
   const prevPage = () => {
     if (page > 1) {
       setPage((prev) => prev - 1);
@@ -35,6 +40,10 @@ export default function Pagination({
   const paginate = (pageNumber: number) => {
     setPage(pageNumber);
   };
+
+  const lastPage = jobListings
+    ? Math.ceil(jobListings.length / resultsPerPage)
+    : 1;
 
   return (
     <div className='flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6'>
@@ -54,14 +63,26 @@ export default function Pagination({
       </div>
       <div className='hidden sm:flex sm:flex-1 sm:items-center sm:justify-between'>
         <div>
-          <p className='text-sm text-gray-700'>
-            Showing{' '}
-            <span className='font-medium'>
-              {page * resultsPerPage - resultsPerPage + 1}
-            </span>{' '}
-            to <span className='font-medium'>{page * resultsPerPage}</span> of{' '}
-            <span className='font-medium'>{jobListings?.length}</span> results
-          </p>
+          {jobListings && jobListings.length > 0 ? (
+            <p className='text-sm text-gray-700'>
+              Showing{' '}
+              <span className='font-medium'>
+                {page * resultsPerPage - resultsPerPage + 1}
+              </span>{' '}
+              to{' '}
+              <span className='font-medium'>
+                {jobListings &&
+                jobListings.length % 10 !== 0 &&
+                page === lastPage
+                  ? jobListings?.length
+                  : page * resultsPerPage}
+              </span>{' '}
+              of <span className='font-medium'>{jobListings?.length}</span>{' '}
+              results
+            </p>
+          ) : (
+            <p className='text-sm text-gray-700'>No results</p>
+          )}
         </div>
         <div>
           <nav
@@ -77,10 +98,10 @@ export default function Pagination({
               <ChevronLeftIcon className='h-5 w-5' aria-hidden='true' />
             </a>
 
-            {[...Array(totalPages)].map((_page, idx) => {
+            {pagesArray.map((_page, idx) => {
               if (page + 2 === idx || page - 4 === idx) {
                 // First 1 and last 1 always show
-                if ([...Array(totalPages)].length - 1 > idx && idx > 0) {
+                if (pagesArray.length - 1 > idx && idx > 0) {
                   return (
                     <span
                       key={idx}
@@ -94,7 +115,7 @@ export default function Pagination({
 
               if (idx < page - 3 || idx > page + 1) {
                 // First 1 and last 1 always show
-                if ([...Array(totalPages)].length - 1 > idx && idx > 0) {
+                if (pagesArray.length - 1 > idx && idx > 0) {
                   return null;
                 }
               }

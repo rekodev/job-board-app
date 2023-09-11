@@ -4,15 +4,19 @@ GET http://localhost:5000/api/job-listings
 ###
 GET http://localhost:5000/api/job-listing/64fc61bc02fe14e940d2aed1
 
-### Add a new job listing
+
+###
+GET http://localhost:5000/api/job-listings/TechSoft
+
+### Add Job Listing 11
 POST http://localhost:5000/api/job-listings
 Content-Type: application/json
 
 {
-    "jobTitle": "Software Developer",
-    "company": "TechCorp",
-    "location": "New York, NY",
-    "jobType": "Full-time",
-    "applicationDeadline": "2023-12-31",
-    "salaryRange": "50000-70000"
+  "jobTitle": "Network Engineer",
+  "company": "NetWorks",
+  "location": "Atlanta, GA",
+  "jobType": "Full-time",
+  "applicationDeadline": "2023-10-12",
+  "salaryRange": "$75,000 - $105,000"
 }

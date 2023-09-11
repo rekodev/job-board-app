@@ -1,15 +1,16 @@
 'use client';
-import FilterPanel from '@/components/FilterPanel';
 import JobListing from '@/components/JobListing';
 import Pagination from '@/components/Pagination';
 import SearchBar from '@/components/SearchBar';
-import useJobListings from '@/hooks/useJobListings';
+import useJobListingsByCompanyName from '@/hooks/useCompanyJobListings';
 import { useEffect, useState } from 'react';
 
-export default function Page() {
+export default function Page({ params }: { params: { companyName: string } }) {
   const [page, setPage] = useState(1);
   const resultsPerPage = 10;
-  const { data, isLoading, isError, error } = useJobListings();
+  const { data, isLoading, isError, error } = useJobListingsByCompanyName(
+    params.companyName
+  );
 
   const [searchTerm, setSearchTerm] = useState('');
   const [newData, setNewData] = useState(data);
@@ -46,8 +47,7 @@ export default function Page() {
     <section className=''>
       <div className='m-auto max-w-7xl py-4 px-8'>
         <SearchBar setSearchTerm={setSearchTerm} />
-        <FilterPanel />
-        <div className='flex flex-col rounded-md shadow-lg overflow-hidden mb-2 '>
+        <div className='flex flex-col rounded-md shadow-lg overflow-hidden my-2 '>
           {newData?.map((job: JobListing, idx: number) => {
             if (
               idx < page * resultsPerPage &&

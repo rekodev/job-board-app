@@ -2,6 +2,7 @@ import cors from 'cors';
 import express, { Express, Request, Response } from 'express';
 import dbConnection from './config/db';
 import JobListings from './models/jobListings.model';
+import JobListing from './models/jobListing.model';
 
 const app: Express = express();
 
@@ -81,3 +82,31 @@ app.post('/api/job-listings', async (req, res) => {
     res.status(500).send('Server Error');
   }
 });
+
+app.get(
+  '/api/job-listings/:companyName',
+  async (req: Request, res: Response) => {
+    try {
+      const companyName = req.params.companyName;
+
+      const listingsDoc = await JobListings.findOne({
+        'jobs.company': companyName,
+      });
+
+      const jobListings = listingsDoc
+        ? listingsDoc.jobs.filter((job) => job.company === companyName)
+        : [];
+
+      if (jobListings.length) {
+        res.json(jobListings);
+      } else {
+        res.status(404).json({
+          message: `No job listings found for company: ${companyName}`,
+        });
+      }
+    } catch (err) {
+      console.error(err);
+      res.status(500).send('Server Error');
+    }
+  }
+);
